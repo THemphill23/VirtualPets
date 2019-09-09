@@ -1,12 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace VirtualPets
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void VirtualPets(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome");
+            Console.WriteLine("Press 1 to start");
+            string player = Console.ReadLine();
+
+            bool Start(ClickStart clickstart)
+            {
+                return true;
+            }
+            
         }
     }
 }
