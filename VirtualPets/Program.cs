@@ -6,17 +6,18 @@ namespace VirtualPets
 {
     public class Program
     {
-        public static void VirtualPets(string[] args)
+         static void Main(string[] args)
         {
             Console.WriteLine("Welcome");
-            Console.WriteLine("Press 1 to start");
-            string player = Console.ReadLine();
-
-            bool Start(ClickStart clickstart)
-            {
-                return true;
-            }
-            
+            var game = new PetAmok();
+            game.Start();
         }
+
+        
+            
+
+            
+            
+        
     }
 }

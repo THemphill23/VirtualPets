@@ -6,25 +6,36 @@ namespace VirtualPets.Tests
     public class VirtualPetsTests
     {
         [Fact]
-        public void Get_Returns_Player_Can_Start_Game()
+        public void Give_The_Pet_A_Name()
         {
-            var clickStart = new ClickStart();
+            var petAmok = new PetAmok();
 
-            var result = clickStart.Start(1);
+            var pet = petAmok.CreatePet("name");
 
-            Assert.Equal("1", result);
+            Assert.Equal("name", pet.petName);
         }
 
         [Fact]
-        public void Player_Starts_Game()
+        public void Is_Your_Pet_Organic()
         {
-            ClickStart clickStart = new ClickStart();
+            var petAmok = new PetAmok();
+            petAmok.MyPet = new Pet();
 
-            string result = clickStart.Start(1);
+            petAmok.SetPetType("organic");
 
-            Assert.Equal("1", result);
+            Assert.Equal(Pet.Type.organic, petAmok.MyPet.PetType);
         }
+       
+        [Fact]
+        public void Is_Your_Pet_Robotic()
+        {
+            var petAmok = new PetAmok();
+            petAmok.MyPet = new Pet();
 
+            petAmok.SetPetType("robotic");
+
+            Assert.Equal(Pet.Type.robotic, petAmok.MyPet.PetType);
+        }
        
     }
 }
