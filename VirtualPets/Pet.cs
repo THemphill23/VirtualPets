@@ -6,8 +6,19 @@ namespace VirtualPets
 {
     public class Pet
     {
-        public string petName { get; set; }
+        public string PetName { get; set; }
         public enum Type { organic, robotic }
-        public Type PetType { get; set; }
+        public string PetType { get; set; }
+
+        public void CreatePet(string petName)
+        {
+            //var pet = new Pet();
+
+            this.PetName = petName;
+
+            
+        }
     }
+
+
 }

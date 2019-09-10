@@ -8,34 +8,34 @@ namespace VirtualPets.Tests
         [Fact]
         public void Give_The_Pet_A_Name()
         {
-            var petAmok = new PetAmok();
+            var pet = new Pet();
 
-            var pet = petAmok.CreatePet("name");
+            pet.CreatePet("name");
 
-            Assert.Equal("name", pet.petName);
+            Assert.Equal("name", pet.PetName);
         }
 
-        [Fact]
-        public void Is_Your_Pet_Organic()
-        {
-            var petAmok = new PetAmok();
-            petAmok.MyPet = new Pet();
+        //[Fact]
+        //public void Is_Your_Pet_Organic()
+        //{
+        //    var petAmok = new PetAmok();
+        //    petAmok.MyPet = new Pet();
 
-            petAmok.SetPetType("organic");
+        //    petAmok.SetPetType("organic");
 
-            Assert.Equal(Pet.Type.organic, petAmok.MyPet.PetType);
-        }
+        //    Assert.Equal(Pet.Type.organic, petAmok.MyPet.PetType);
+        //}
        
-        [Fact]
-        public void Is_Your_Pet_Robotic()
-        {
-            var petAmok = new PetAmok();
-            petAmok.MyPet = new Pet();
+        //[Fact]
+        //public void Is_Your_Pet_Robotic()
+        //{
+        //    var petAmok = new PetAmok();
+        //    petAmok.MyPet = new Pet();
 
-            petAmok.SetPetType("robotic");
+        //    petAmok.SetPetType("robotic");
 
-            Assert.Equal(Pet.Type.robotic, petAmok.MyPet.PetType);
-        }
+        //    Assert.Equal(Pet.Type.robotic, petAmok.MyPet.PetType);
+        //}
        
     }
 }

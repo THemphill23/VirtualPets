@@ -6,61 +6,56 @@ namespace VirtualPets
 {
     public class PetAmok
     {
-        public Pet MyPet{get; set;}
+        Pet myPet = new Pet();
+
         public void Start()
         {
-            Console.WriteLine("Type start to begin the game.");
 
-            while(true)
+            bool inPlay = true;
+            while(inPlay)
             {
+                Console.WriteLine();
+                Console.WriteLine("What would you like to do?");
+                Console.WriteLine("Enter 'L' to leave");
+                Console.WriteLine("Type 'Add' to add a pet");
+                Console.WriteLine("After you Add a pet, type 'Info' to view its information");
+
                 string input = Console.ReadLine().ToLower();
 
                 switch (input)
                 {
-                    case ("leave"):
-                        return;
+                    case ("l"):
+                        inPlay = false;
+                        break;
 
-                    case ("start"):
+                    case ("add"):
                         Console.WriteLine("What is your pet's name?");
                         string petName = Console.ReadLine();
-                        MyPet = this.CreatePet(petName);
+                        Console.Clear();
+                        myPet.CreatePet(petName);
 
                         Console.WriteLine("Your pet's name is " + petName);
                         Console.WriteLine("Is your pet organic or robotic?");
                         string petType = Console.ReadLine().ToLower();
-                        SetPetType(petType);
-
-                 break;
-
+                        Console.Clear();
+                        myPet.PetType = petType;
+                        break;
+                      
+                    case ("info"):
                         
+                        Console.Clear();
+                        Console.WriteLine("Your pet name is " + myPet.PetName + " and it is " + myPet.PetType);
+                       
+                        break;
+
+                    default:
+                        Console.WriteLine("Please enter proper response");
+                        break;
                 }
             }
         }
-        public void SetPetType(string petType)
+        
 
-        {
-            switch (petType)
-            {
-
-                case ("oragnic"):
-                    Console.WriteLine("Your pet is organic.");
-                    MyPet.PetType = Pet.Type.organic;
-                    break;
-
-                case ("robotic"):
-                    Console.WriteLine("Your pet is robotic.");
-                    MyPet.PetType = Pet.Type.robotic;
-                    break;
-            }
-        }
-
-        public Pet CreatePet(string petName)
-        {
-            var pet = new Pet();
-
-            pet.petName = petName;
-
-            return pet;
-        }
+        
     }
 }

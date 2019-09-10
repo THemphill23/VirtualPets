@@ -11,6 +11,8 @@ namespace VirtualPets
             Console.WriteLine("Welcome");
             var game = new PetAmok();
             game.Start();
+
+            Console.WriteLine("Thanks for playing.");
         }
 
         
