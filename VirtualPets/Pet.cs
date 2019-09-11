@@ -29,20 +29,18 @@ namespace VirtualPets
             this.PetName = petName;
         }
 
-        public void CreateHunger(int petHunger)
+        public void Feed()
         {
-            
-            this.PetHunger = petHunger;
             if (PetHunger > 0)
             {
                 PetHunger--;
 
             }
 
-            else 
+            else
 
                 Console.WriteLine("Pet is full");
-            
+
         }
         public void CreateBoredom(int petBoredom)
         {

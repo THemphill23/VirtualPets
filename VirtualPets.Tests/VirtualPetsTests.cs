@@ -19,10 +19,22 @@ namespace VirtualPets.Tests
         {
             Pet pet = new Pet();
 
-            pet.CreateHunger(pet.PetHunger-1);
+            pet.Feed();
 
-            Assert.Equal(pet.PetHunger = pet.PetHunger -1, pet.PetHunger);
+            Assert.Equal(4, pet.PetHunger);
         }
+
+        [Fact]
+        public void Hunger_Does_Not_Go_Below_Zero()
+        {
+            Pet pet = new Pet();
+
+            pet.PetHunger = 0;
+            pet.Feed();
+
+            Assert.Equal(0, pet.PetHunger);
+        }
+
         [Fact]
         public void Did_Pet_Boredom_Improve()
         {

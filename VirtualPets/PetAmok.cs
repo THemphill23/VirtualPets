@@ -79,7 +79,7 @@ namespace VirtualPets
                             Console.Clear();
 
                             Console.WriteLine("You have fed your pet.");
-                            myPet.CreateHunger(myPet.PetHunger);
+                            myPet.Feed();
 
                             break;
 
