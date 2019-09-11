@@ -14,28 +14,35 @@ namespace VirtualPets.Tests
 
             Assert.Equal("name", pet.PetName);
         }
+        [Fact]
+        public void Did_Pet_Hunger_Improve()
+        {
+            Pet pet = new Pet();
 
-        //[Fact]
-        //public void Is_Your_Pet_Organic()
-        //{
-        //    var petAmok = new PetAmok();
-        //    petAmok.MyPet = new Pet();
+            pet.CreateHunger(pet.PetHunger-1);
 
-        //    petAmok.SetPetType("organic");
+            Assert.Equal(pet.PetHunger = pet.PetHunger -1, pet.PetHunger);
+        }
+        [Fact]
+        public void Did_Pet_Boredom_Improve()
+        {
+            Pet pet = new Pet();
 
-        //    Assert.Equal(Pet.Type.organic, petAmok.MyPet.PetType);
-        //}
-       
-        //[Fact]
-        //public void Is_Your_Pet_Robotic()
-        //{
-        //    var petAmok = new PetAmok();
-        //    petAmok.MyPet = new Pet();
+            pet.CreateBoredom(pet.PetBoredom - 1);
 
-        //    petAmok.SetPetType("robotic");
+            Assert.Equal(pet.PetBoredom = pet.PetBoredom - 1, pet.PetBoredom);
+        }
+        [Fact]
+        public void Did_Pet_Health_Improve()
+        {
+            Pet pet = new Pet();
 
-        //    Assert.Equal(Pet.Type.robotic, petAmok.MyPet.PetType);
-        //}
-       
+            pet.CreateHealth(pet.PetHealth + 1);
+
+            Assert.Equal(pet.PetHealth = pet.PetHealth + 1, pet.PetHealth);
+        }
+
+        
+
     }
 }

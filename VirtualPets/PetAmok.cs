@@ -14,13 +14,17 @@ namespace VirtualPets
             bool inPlay = true;
             while(inPlay)
             {
-                Console.WriteLine();
-                Console.WriteLine("What would you like to do?");
+                Console.WriteLine("\nWhat would you like to do?");
                 Console.WriteLine("Enter 'L' to leave");
-                Console.WriteLine("Type 'Add' to add a pet to shelter");
-                Console.WriteLine("After you Add a pet, type 'Info' to view its information.");
-                Console.WriteLine("Type 'Info' to view its information, 'Status' to view its status,");
-                Console.WriteLine("After you Add a pet, type 'Feed' to give your pet food.");
+                Console.WriteLine("Type 'A' to add a pet to shelter");
+                
+                Console.WriteLine("Once you have a pet added:");
+                Console.WriteLine("Type 'I' to view its information");
+                Console.WriteLine("Type 'S' to view its status");
+
+                Console.WriteLine("type 'F' to give your pet food.");
+                Console.WriteLine("type 'P' to play with your pet.");
+                Console.WriteLine("type 'D' to heal your pet.");
                 string input = Console.ReadLine().ToLower();
 
                 switch (input)
@@ -29,12 +33,9 @@ namespace VirtualPets
                         inPlay = false;
                         break;
 
-                    case ("add"):
+                    case ("a"):
                         Console.WriteLine("What is your pet's name?");
                         string petName = Console.ReadLine();
-                        //int petHunger = Convert.ToInt32("10");
-                        //int petBoredom = Convert.ToInt32("10");
-                        //int petHealth = Convert.ToInt32("10");
                         Console.Clear();
                         myPet.CreatePet(petName);
 
@@ -42,19 +43,19 @@ namespace VirtualPets
                         while (true)
                         {
                             Console.WriteLine("Is your pet organic or robotic?");
+                            Console.WriteLine("'O' for organic, 'R' for robotic" );
                             string petType = Console.ReadLine().ToLower();
                             myPet.PetType = petType;
 
-                            if (petType == "organic")
+                            if (petType == "o")
                                 break;
-                            else if (petType == "robotic")
+                            else if (petType == "r")
                                 break;
                             else Console.WriteLine("not a valid entry");
                         }
-
-                        while (true)
+                        bool specChoice = true;
+                        while (specChoice)
                         {
-
                             Console.WriteLine("What species of pet is it");
                             Console.WriteLine("Dog, Cat, Hampster, Lizard, Bird, Robot");
                             string petSpecies = Console.ReadLine().ToLower();
@@ -62,34 +63,37 @@ namespace VirtualPets
 
                             if (petSpecies == "dog")
                                 break;
+
                             else if (petSpecies == "cat")
                                 break;
+
                             else if (petSpecies == "hampster")
                                 break;
-                            else if (petSpecies == "lizard")
+
+                            else if (petSpecies == "lizzard")
                                 break;
+
                             else if (petSpecies == "bird")
                                 break;
+
                             else if (petSpecies == "robot")
                                 break;
-                        
-                            else Console.WriteLine("not a valid entry");
+                            else
+                                Console.WriteLine("not a valid entry");
+                            break;
+                       
 
                         }
-                         Console.Clear();
-                        
-                        
+                       Console.Clear();
                         break;
-
                         
-                      
-                    case ("info"):
+                    case ("i"):
                         
                         Console.Clear();
                         Console.WriteLine("Your pet name is " + myPet.PetName + " and it is an " + myPet.PetType + " " + myPet.PetSpecies);
                         break;
 
-                    case ("status"):
+                    case ("s"):
                         Console.Clear();
                         Console.WriteLine("Your pets status is:");
                         Console.WriteLine("hunger " + myPet.PetHunger);
@@ -97,11 +101,28 @@ namespace VirtualPets
                         Console.WriteLine("health " + myPet.PetHealth);
                         break;
 
-                    case ("feed"):
+                    case ("f"):
                         Console.Clear();
+                        
                         Console.WriteLine("You have fed your pet.");
-                        myPet.PetHunger -- ;
+                        myPet.CreateHunger(myPet.PetHunger);
+                        
                         break;
+
+                    case ("p"):
+                        Console.Clear();
+                        Console.WriteLine("You have played with your pet.");
+                        
+                        myPet.CreateBoredom(myPet.PetBoredom);
+                        break;
+
+                    case ("d"):
+                        Console.Clear();
+                        Console.WriteLine("You have improved your pet's health.");
+                        
+                        myPet.CreateHealth(myPet.PetHealth);
+                        break;
+
                     default:
                         Console.WriteLine("Please enter proper response");
                         break;

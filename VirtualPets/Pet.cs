@@ -11,28 +11,72 @@ namespace VirtualPets
         public string PetType { get; set; }
         public string PetSpecies { get; set; }
 
-        public int PetHunger = 10;
-        public int PetBoredom = 10;
-        public int PetHealth = 10;
+        public int PetHunger { get; set; }
+      
+        public int PetBoredom { get; set; }
+        public int PetHealth { get; set; }
+
+        public Pet()
+        {
+            PetHunger = 5;
+            PetBoredom = 5;
+            PetHealth = 5;
+            
+        }
 
         public void CreatePet(string petName)
         {
             this.PetName = petName;
         }
 
-        //public void CreateHunger(int petHunger)
-        //{
-        //    this.PetHunger = petHunger;
-        //}
-        //public void CreateBoredom(int petBoredom)
-        //{
-        //    this.PetBoredom = petBoredom;
-        //}
-        //public void CreateHealth(int petHealth)
-        //{
-        //    this.PetHealth = petHealth;
-        //}
+        public void CreateHunger(int petHunger)
+        {
+            
+            this.PetHunger = petHunger;
+            if (PetHunger > 0)
+            {
+                PetHunger--;
+
+            }
+
+            else 
+
+                Console.WriteLine("Pet is full");
+            
+        }
+        public void CreateBoredom(int petBoredom)
+        {
+
+            this.PetBoredom = petBoredom;
+            if (PetBoredom > 0)
+            {
+                PetBoredom --;
+
+            }
+
+            else
+
+                Console.WriteLine("Pet is Happy");
+
+        }
+        public void CreateHealth(int petHealth)
+        {
+
+            this.PetHealth = petHealth;
+            if (PetHealth < 10)
+            {
+                PetHealth ++;
+
+            }
+
+            else
+            
+                Console.WriteLine("Pet is Healthy");
+
+        }
+       
     }
+    
 
 
 }
