@@ -10,10 +10,10 @@ namespace VirtualPets
 
         public void Start()
         {
-            
-            
 
-             bool inPlay = true;
+           
+
+            bool inPlay = true;
                 while (inPlay)
                 {
                     Console.WriteLine("\nWhat would you like to do?");

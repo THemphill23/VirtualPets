@@ -104,6 +104,13 @@ namespace VirtualPets
             Console.WriteLine("boredom " + PetBoredom);
             Console.WriteLine("health " + PetHealth);
         }
+        public void Shelter()
+        {
+
+            List<Pet> allPetsInShelter = new List<Pet>();
+            allPetsInShelter.Add(new Pet());
+        }
+
     }
     
 
