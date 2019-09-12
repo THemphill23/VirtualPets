@@ -26,7 +26,7 @@ namespace VirtualPets
 
                     Console.WriteLine("Type 'F' to give your pet food.");
                     Console.WriteLine("Type 'P' to play with your pet.");
-                    Console.WriteLine("Type 'D' to heal your pet.");
+                    Console.WriteLine("Type 'H' to heal your pet.");
                     string input = Console.ReadLine().ToLower();
                     
 
@@ -37,64 +37,34 @@ namespace VirtualPets
                             break;
 
                         case ("a"):
-                            Console.WriteLine("\nWhat is your pet's name?");
-                            string petName = Console.ReadLine();
-                            Console.Clear();
-                            myPet.CreatePet(petName);
-
-                            
-                            while (true)
-                            {
-                                Console.WriteLine("Is your pet organic or robotic?");
-                                string petType = Console.ReadLine().ToLower();
-                                myPet.PetType = petType;
-
-                                if (petType == "organic")
-                                    break;
-                                else if (petType == "robotic")
-                                    break;
-                                else Console.WriteLine("not a valid entry");
-                            }
-                            Console.WriteLine("What species is your pet?");
-                            string petSpecies = Console.ReadLine().ToLower();
-                            myPet.PetSpecies = petSpecies;
-                            Console.Clear();
+                            myPet.CreatePet();
                             break;
 
                         case ("i"):
 
                             Console.Clear();
-                            Console.WriteLine("Your pet name is " + myPet.PetName + " and it is an " + myPet.PetType + " " + myPet.PetSpecies + ".");
+                            myPet.PetInfo();
                             break;
 
                         case ("s"):
                             Console.Clear();
-                            Console.WriteLine("Your pets status is:");
-                            Console.WriteLine("hunger " + myPet.PetHunger);
-                            Console.WriteLine("boredom " + myPet.PetBoredom);
-                            Console.WriteLine("health " + myPet.PetHealth);
+                            myPet.PetStatus();
                             break;
 
                         case ("f"):
                             Console.Clear();
-
-                            Console.WriteLine("You have fed your pet.");
-                            myPet.CreateHunger(myPet.PetHunger);
+                            myPet.Feed();
 
                             break;
 
                         case ("p"):
                             Console.Clear();
-                            Console.WriteLine("You have played with your pet.");
-
-                            myPet.CreateBoredom(myPet.PetBoredom);
+                            myPet.Play();
                             break;
 
-                        case ("d"):
+                        case ("h"):
                             Console.Clear();
-                            Console.WriteLine("You have improved your pet's health.");
-
-                            myPet.CreateHealth(myPet.PetHealth);
+                            myPet.Health();
                             break;
 
                         default:
