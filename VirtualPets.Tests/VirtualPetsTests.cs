@@ -5,15 +5,6 @@ namespace VirtualPets.Tests
 {
     public class VirtualPetsTests
     {
-        //[Fact]
-        //public void Give_The_Pet_A_Name()
-        //{
-        //    var pet = new Pet();
-
-        //    pet.CreatePet("name");
-
-        //    Assert.Equal("name", pet.PetName);
-        //}
         [Fact]
         public void Did_Pet_Hunger_Improve()
         {

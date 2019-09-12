@@ -26,7 +26,6 @@ namespace VirtualPets
 
         public void CreatePet()
         {
-            //this.PetName = petName;
             Console.WriteLine("\nWhat is your pet's name?");
             PetName = Console.ReadLine();
             Console.Clear();
@@ -104,12 +103,7 @@ namespace VirtualPets
             Console.WriteLine("boredom " + PetBoredom);
             Console.WriteLine("health " + PetHealth);
         }
-        public void Shelter()
-        {
-
-            List<Pet> allPetsInShelter = new List<Pet>();
-            allPetsInShelter.Add(new Pet());
-        }
+        
 
     }
     

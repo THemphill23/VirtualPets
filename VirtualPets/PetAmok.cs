@@ -67,10 +67,16 @@ namespace VirtualPets
                             myPet.Health();
                             break;
 
+                    
+
                         default:
                             Console.WriteLine("Please enter proper response!!!!");
                             break;
                     }
+               
+
+                
+
                 }
                
             
