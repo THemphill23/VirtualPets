@@ -5,15 +5,15 @@ namespace VirtualPets.Tests
 {
     public class VirtualPetsTests
     {
-        [Fact]
-        public void Give_The_Pet_A_Name()
-        {
-            var pet = new Pet();
+        //[Fact]
+        //public void Give_The_Pet_A_Name()
+        //{
+        //    var pet = new Pet();
 
-            pet.CreatePet("name");
+        //    pet.CreatePet("name");
 
-            Assert.Equal("name", pet.PetName);
-        }
+        //    Assert.Equal("name", pet.PetName);
+        //}
         [Fact]
         public void Did_Pet_Hunger_Improve()
         {
@@ -40,21 +40,41 @@ namespace VirtualPets.Tests
         {
             Pet pet = new Pet();
 
-            pet.CreateBoredom(pet.PetBoredom - 1);
+            pet.Play();
 
-            Assert.Equal(pet.PetBoredom = pet.PetBoredom - 1, pet.PetBoredom);
+            Assert.Equal(4, pet.PetBoredom);
+
+        }
+        [Fact]
+        public void Boredom_Does_Not_Go_Below_Zero()
+        {
+            Pet pet = new Pet();
+
+            pet.PetBoredom = 0;
+            pet.Play();
+
+            Assert.Equal(0, pet.PetBoredom);
         }
         [Fact]
         public void Did_Pet_Health_Improve()
         {
             Pet pet = new Pet();
 
-            pet.CreateHealth(pet.PetHealth + 1);
+            pet.Health();
 
-            Assert.Equal(pet.PetHealth = pet.PetHealth + 1, pet.PetHealth);
+            Assert.Equal(6, pet.PetHealth);
+        }
+        [Fact]
+        public void Health_Does_Not_Go_Above_Ten()
+        {
+            Pet pet = new Pet();
+
+            pet.PetHealth = 10;
+            pet.Health();
+
+            Assert.Equal(10, pet.PetHealth);
         }
 
-        
 
     }
 }

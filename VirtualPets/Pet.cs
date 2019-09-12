@@ -24,16 +24,37 @@ namespace VirtualPets
             
         }
 
-        public void CreatePet(string petName)
+        public void CreatePet()
         {
-            this.PetName = petName;
+            //this.PetName = petName;
+            Console.WriteLine("\nWhat is your pet's name?");
+            PetName = Console.ReadLine();
+            Console.Clear();
+            while (true)
+            {
+                Console.WriteLine("Is your pet organic or robotic?");
+                string petType = Console.ReadLine().ToLower();
+                PetType = petType;
+
+                if (petType == "organic")
+                    break;
+                else if (petType == "robotic")
+                    break;
+                else Console.WriteLine("not a valid entry");
+            }
+            Console.WriteLine("What species is your pet?");
+            string petSpecies = Console.ReadLine().ToLower();
+            PetSpecies = petSpecies;
+            Console.Clear();
         }
 
         public void Feed()
         {
+
             if (PetHunger > 0)
             {
                 PetHunger--;
+                Console.WriteLine("You have fed your pet.");
 
             }
 
@@ -42,14 +63,14 @@ namespace VirtualPets
                 Console.WriteLine("Pet is full");
 
         }
-        public void CreateBoredom(int petBoredom)
+        public void Play()
         {
 
-            this.PetBoredom = petBoredom;
+            
             if (PetBoredom > 0)
             {
                 PetBoredom --;
-
+                Console.WriteLine("You have played with your pet.");
             }
 
             else
@@ -57,14 +78,14 @@ namespace VirtualPets
                 Console.WriteLine("Pet is Happy");
 
         }
-        public void CreateHealth(int petHealth)
+        public void Health()
         {
 
-            this.PetHealth = petHealth;
+           
             if (PetHealth < 10)
             {
                 PetHealth ++;
-
+                Console.WriteLine("You have improved your pet's health.");
             }
 
             else
@@ -72,7 +93,17 @@ namespace VirtualPets
                 Console.WriteLine("Pet is Healthy");
 
         }
-       
+        public void PetInfo()
+        {
+            Console.WriteLine("Your pet name is " + PetName + " and it is an " + PetType + " " + PetSpecies + ".");
+        }
+        public void PetStatus()
+        {
+            Console.WriteLine("Your pets status is:");
+            Console.WriteLine("hunger " + PetHunger);
+            Console.WriteLine("boredom " + PetBoredom);
+            Console.WriteLine("health " + PetHealth);
+        }
     }
     
 
