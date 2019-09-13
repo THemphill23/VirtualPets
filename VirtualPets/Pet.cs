@@ -45,27 +45,21 @@ namespace VirtualPets
             Console.WriteLine("What species is your pet?");
             string petSpecies = Console.ReadLine().ToLower();
             PetSpecies = petSpecies;
+
             Console.Clear();
 
 
-            List<Pet> allPetsInShelter = new List<Pet>
-            {
-                new Pet(),
-            };
-
-            //Pet pet = new Pet();
-
-            //allPetsInShelter.Add(pet);
-            //Console.WriteLine(allPetsInShelter[0]);
-
-            foreach (Pet pet in  allPetsInShelter )
-                Console.WriteLine(PetName);
-
-            // public void addPet()
+            //List<Pet> allPetsInShelter = new List<Pet>
             //{
+            //    new Pet(),
+            //};
 
-            //}
-            
+
+
+            //foreach (Pet pet in allPetsInShelter)
+            //    Console.WriteLine(PetName);
+
+
         }
 
         public void Feed()

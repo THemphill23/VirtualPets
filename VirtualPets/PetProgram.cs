@@ -40,20 +40,13 @@ namespace VirtualPets
 
                         case "a":
                             myPet.CreatePet();
-                        //List<Pet> allPetsInShelter = new List<Pet>();
+                            myShelter.AddPetToShelter(myPet);
+                       
+                            break;
 
-                        //allPetsInShelter.Add(new Pet())
-                        //    /*Shelter.petShelter()*/;
-                        //if (input == "a")
-                        //{
-                        //Console.WriteLine(allPetsInShelter[0]);
-
-                        //}
-                        break;
-
-                        //case "v":
-                        //    myPet.addPet();
-                        //    break;
+                    //case "v":
+                    //    myShelter.Show_Pets_Name();
+                    //    break;
 
                         case "i":
 
