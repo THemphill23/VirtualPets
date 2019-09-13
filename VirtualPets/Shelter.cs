@@ -17,7 +17,7 @@ namespace VirtualPets
         public void ShowListOfPets()
         {
             foreach (Pet pet in allPetsInShelter)
-            Console.WriteLine(pet);
+            pet.PetInfo();
             Console.WriteLine("Pet Inbound");
         }
 
