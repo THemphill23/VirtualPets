@@ -44,9 +44,9 @@ namespace VirtualPets
                        
                             break;
 
-                    //case "v":
-                    //    myShelter.Show_Pets_Name();
-                    //    break;
+                        case "v":
+                            myShelter.ShowListOfPets();
+                            break;
 
                         case "i":
 
