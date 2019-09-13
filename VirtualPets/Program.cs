@@ -9,7 +9,7 @@ namespace VirtualPets
          static void Main(string[] args)
         {
             Console.WriteLine("Welcome");
-            var game = new PetAmok();
+            var game = new PetProgram();
             game.Start();
 
             Console.WriteLine("Thanks for playing.");

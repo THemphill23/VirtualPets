@@ -18,6 +18,7 @@ namespace VirtualPets
 
         public Pet()
         {
+          
             PetHunger = 5;
             PetBoredom = 5;
             PetHealth = 5;
@@ -45,6 +46,26 @@ namespace VirtualPets
             string petSpecies = Console.ReadLine().ToLower();
             PetSpecies = petSpecies;
             Console.Clear();
+
+
+            List<Pet> allPetsInShelter = new List<Pet>
+            {
+                new Pet(),
+            };
+
+            //Pet pet = new Pet();
+
+            //allPetsInShelter.Add(pet);
+            //Console.WriteLine(allPetsInShelter[0]);
+
+            foreach (Pet pet in  allPetsInShelter )
+                Console.WriteLine(PetName);
+
+            // public void addPet()
+            //{
+
+            //}
+            
         }
 
         public void Feed()

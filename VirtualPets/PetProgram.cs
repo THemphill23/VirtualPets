@@ -4,9 +4,10 @@ using System.Text;
 
 namespace VirtualPets
 {
-    public class PetAmok
+    public class PetProgram
     {
         Pet myPet = new Pet();
+        Shelter myShelter = new Shelter();
 
         public void Start()
         {
@@ -27,42 +28,56 @@ namespace VirtualPets
                     Console.WriteLine("Type 'F' to give your pet food.");
                     Console.WriteLine("Type 'P' to play with your pet.");
                     Console.WriteLine("Type 'H' to heal your pet.");
+                    Console.WriteLine("Type 'V' to view the list of pets.");
                     string input = Console.ReadLine().ToLower();
                     
 
                     switch (input)
                     {
-                        case ("l"):
+                        case "l":
                             inPlay = false;
                             break;
 
-                        case ("a"):
+                        case "a":
                             myPet.CreatePet();
-                            break;
+                        //List<Pet> allPetsInShelter = new List<Pet>();
 
-                        case ("i"):
+                        //allPetsInShelter.Add(new Pet())
+                        //    /*Shelter.petShelter()*/;
+                        //if (input == "a")
+                        //{
+                        //Console.WriteLine(allPetsInShelter[0]);
+
+                        //}
+                        break;
+
+                        //case "v":
+                        //    myPet.addPet();
+                        //    break;
+
+                        case "i":
 
                             Console.Clear();
                             myPet.PetInfo();
                             break;
 
-                        case ("s"):
+                        case "s":
                             Console.Clear();
                             myPet.PetStatus();
                             break;
 
-                        case ("f"):
+                        case "f":
                             Console.Clear();
                             myPet.Feed();
 
                             break;
 
-                        case ("p"):
+                        case "p":
                             Console.Clear();
                             myPet.Play();
                             break;
 
-                        case ("h"):
+                        case "h":
                             Console.Clear();
                             myPet.Health();
                             break;
