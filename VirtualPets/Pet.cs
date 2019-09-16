@@ -27,6 +27,7 @@ namespace VirtualPets
 
         public void CreatePet()
         {
+            
             Console.WriteLine("\nWhat is your pet's name?");
             PetName = Console.ReadLine();
             Console.Clear();
@@ -47,17 +48,6 @@ namespace VirtualPets
             PetSpecies = petSpecies;
 
             Console.Clear();
-
-
-            //List<Pet> allPetsInShelter = new List<Pet>
-            //{
-            //    new Pet(),
-            //};
-
-
-
-            //foreach (Pet pet in allPetsInShelter)
-            //    Console.WriteLine(PetName);
 
 
         }

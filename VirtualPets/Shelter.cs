@@ -22,16 +22,6 @@ namespace VirtualPets
         }
 
 
-        //public void Show_Pets_Name()
-        //{
-
-        //string nameOne = Pet.PetName;
-        //    foreach (Pet pet in allPetsInShelter)
-
-        //        Console.WriteLine(nameOne);
-
-        ////}
-
 
     }
 }

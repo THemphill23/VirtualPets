@@ -8,51 +8,35 @@ namespace VirtualPets
     {
         Pet myPet = new Pet();
         Shelter myShelter = new Shelter();
+        Menu gameMenu = new Menu();
 
         public void Start()
         {
 
-           
-
-            bool inPlay = true;
+           bool inPlay = true;
                 while (inPlay)
                 {
-                    Console.WriteLine("\nWhat would you like to do?");
-                    Console.WriteLine("Enter 'L' to leave");
-                    Console.WriteLine("Type 'A' to add a pet to shelter.");
+                gameMenu.TheGameMenu();
+                string input = Console.ReadLine().ToLower();
 
-                    Console.WriteLine("\nOnce you have a pet added:");
-                    Console.WriteLine("Type 'I' to view its information.");
-                    Console.WriteLine("Type 'S' to view its status.");
 
-                    Console.WriteLine("Type 'F' to give your pet food.");
-                    Console.WriteLine("Type 'P' to play with your pet.");
-                    Console.WriteLine("Type 'H' to heal your pet.");
-                    Console.WriteLine("Type 'V' to view the list of pets.");
-                    string input = Console.ReadLine().ToLower();
-                    
-
-                    switch (input)
+                switch (input)
                     {
                         case "l":
                             inPlay = false;
                             break;
 
                         case "a":
+                            myPet = new Pet();
                             myPet.CreatePet();
                             myShelter.AddPetToShelter(myPet);
                        
                             break;
 
-                        case "v":
+                        case "i":
                             myShelter.ShowListOfPets();
                             break;
 
-                        case "i":
-
-                            Console.Clear();
-                            myPet.PetInfo();
-                            break;
 
                         case "s":
                             Console.Clear();
