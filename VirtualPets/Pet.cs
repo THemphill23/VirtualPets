@@ -18,6 +18,7 @@ namespace VirtualPets
 
         public Pet()
         {
+          
             PetHunger = 5;
             PetBoredom = 5;
             PetHealth = 5;
@@ -26,7 +27,7 @@ namespace VirtualPets
 
         public void CreatePet()
         {
-            //this.PetName = petName;
+            
             Console.WriteLine("\nWhat is your pet's name?");
             PetName = Console.ReadLine();
             Console.Clear();
@@ -45,7 +46,10 @@ namespace VirtualPets
             Console.WriteLine("What species is your pet?");
             string petSpecies = Console.ReadLine().ToLower();
             PetSpecies = petSpecies;
+
             Console.Clear();
+
+
         }
 
         public void Feed()
@@ -104,6 +108,8 @@ namespace VirtualPets
             Console.WriteLine("boredom " + PetBoredom);
             Console.WriteLine("health " + PetHealth);
         }
+        
+
     }
     
 
