@@ -40,23 +40,22 @@ namespace VirtualPets
 
                         case "s":
                             Console.Clear();
-                        myShelter.ShowStatusOfPets();
-                        break;
+                            myShelter.ShowStatusOfPets();
+                            break;
 
                         case "f":
                             Console.Clear();
-                            myPet.Feed();
-
+                            myShelter.FeedAllPets();
                             break;
 
                         case "p":
                             Console.Clear();
-                            myPet.Play();
+                            myShelter.PlayAllPets();
                             break;
 
                         case "h":
                             Console.Clear();
-                            myPet.Health();
+                            myShelter.HealAllPets();
                             break;
 
                     

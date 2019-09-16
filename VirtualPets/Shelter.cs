@@ -28,8 +28,20 @@ namespace VirtualPets
                 Console.WriteLine();
             }
         }
-
-
-
+        public void FeedAllPets()
+        {
+            foreach (Pet pet in allPetsInShelter)
+            pet.Feed();
+        }
+        public void HealAllPets()
+        {
+            foreach (Pet pet in allPetsInShelter)
+            pet.Health();
+        }
+        public void PlayAllPets()
+        {
+            foreach (Pet pet in allPetsInShelter)
+            pet.Play();
+        }
     }
 }
