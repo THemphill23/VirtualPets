@@ -5,10 +5,20 @@ namespace VirtualPets.Tests
 {
     public class VirtualPetsTests
     {
+        Pet pet;
+        Shelter shelter;
+
+        public VirtualPetsTests()
+            {
+            pet = new Pet();
+            shelter = new Shelter();
+            }
+       
+
+
         [Fact]
         public void Did_Pet_Hunger_Improve()
         {
-            Pet pet = new Pet();
 
             pet.Feed();
 
@@ -18,7 +28,6 @@ namespace VirtualPets.Tests
         [Fact]
         public void Hunger_Does_Not_Go_Below_Zero()
         {
-            Pet pet = new Pet();
 
             pet.PetHunger = 0;
             pet.Feed();
@@ -29,7 +38,6 @@ namespace VirtualPets.Tests
         [Fact]
         public void Did_Pet_Boredom_Improve()
         {
-            Pet pet = new Pet();
 
             pet.Play();
 
@@ -39,7 +47,6 @@ namespace VirtualPets.Tests
         [Fact]
         public void Boredom_Does_Not_Go_Below_Zero()
         {
-            Pet pet = new Pet();
 
             pet.PetBoredom = 0;
             pet.Play();
@@ -49,7 +56,6 @@ namespace VirtualPets.Tests
         [Fact]
         public void Did_Pet_Health_Improve()
         {
-            Pet pet = new Pet();
 
             pet.Health();
 
@@ -58,13 +64,62 @@ namespace VirtualPets.Tests
         [Fact]
         public void Health_Does_Not_Go_Above_Ten()
         {
-            Pet pet = new Pet();
 
             pet.PetHealth = 10;
             pet.Health();
 
             Assert.Equal(10, pet.PetHealth);
         }
+        [Fact]
+        public void Is_A_List_Made()
+        {
+        }
+
+        //[Fact]
+        //public void Feed_All_Pets()
+        //{
+
+
+        //    shelter.ShowStatusOfPets();
+        //    shelter.FeedAllPets();
+
+
+        //    Assert.Equal(4, pet.PetHunger);
+        //}
+
+        //[Fact]
+        //public void Play_With_All_Pets()
+        //{
+        //    shelter.PlayAllPets();
+        //    pet.PetHunger--;
+        //    Assert.Equal(4, pet.PetHunger);
+        //}
+
+        //[Fact]
+        //public void Heal_All_Pets()
+        //{
+        //    shelter.HealAllPets();
+        //    pet.PetHunger--;
+        //    Assert.Equal(4, pet.PetHunger);
+        //}
+
+
+        //[Fact]
+        //public void Pet_Gets_Added_To_List()
+        //{
+        //    Shelter shelter = new Shelter();
+        //    shelter.allPetsInShelter.Clear();
+
+        //    shelter.AddPetToShelter(Pet.PetName, "Bob");
+
+        //    Assert.Single(shelter.allPetsInShelter);
+
+
+
+        //}
+
+
+
 
 
     }

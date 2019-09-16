@@ -10,6 +10,7 @@ namespace VirtualPets
           
         public void AddPetToShelter(Pet myPet)
         {
+           
             allPetsInShelter.Add(myPet);
 
         }

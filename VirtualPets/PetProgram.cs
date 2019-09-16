@@ -27,6 +27,7 @@ namespace VirtualPets
                             break;
 
                         case "a":
+                            Console.Clear();
                             myPet = new Pet();
                             myPet.CreatePet();
                             myShelter.AddPetToShelter(myPet);
@@ -34,6 +35,7 @@ namespace VirtualPets
                             break;
 
                         case "i":
+                            Console.Clear();
                             myShelter.ShowListOfPets();
                             break;
 
