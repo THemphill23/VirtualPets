@@ -24,7 +24,6 @@ namespace VirtualPets
         {
             foreach (Pet pet in allPetsInShelter)
             {
-                pet.PetNames();
                 pet.PetStatus();
                 Console.WriteLine();
             }

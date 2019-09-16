@@ -73,50 +73,25 @@ namespace VirtualPets.Tests
         [Fact]
         public void Is_A_List_Made()
         {
+
         }
 
-        //[Fact]
-        //public void Feed_All_Pets()
-        //{
 
 
-        //    shelter.ShowStatusOfPets();
-        //    shelter.FeedAllPets();
+        [Fact]
+        public void Pet_Gets_Added_To_List()
+        {
+            Pet pet = new Pet();
+            Shelter shelter = new Shelter();
+            shelter.allPetsInShelter.Clear();
 
+            shelter.AddPetToShelter(pet);
 
-        //    Assert.Equal(4, pet.PetHunger);
-        //}
-
-        //[Fact]
-        //public void Play_With_All_Pets()
-        //{
-        //    shelter.PlayAllPets();
-        //    pet.PetHunger--;
-        //    Assert.Equal(4, pet.PetHunger);
-        //}
-
-        //[Fact]
-        //public void Heal_All_Pets()
-        //{
-        //    shelter.HealAllPets();
-        //    pet.PetHunger--;
-        //    Assert.Equal(4, pet.PetHunger);
-        //}
-
-
-        //[Fact]
-        //public void Pet_Gets_Added_To_List()
-        //{
-        //    Shelter shelter = new Shelter();
-        //    shelter.allPetsInShelter.Clear();
-
-        //    shelter.AddPetToShelter(Pet.PetName, "Bob");
-
-        //    Assert.Single(shelter.allPetsInShelter);
+            Assert.Single(shelter.allPetsInShelter);
 
 
 
-        //}
+        }
 
 
 

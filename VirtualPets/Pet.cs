@@ -58,7 +58,7 @@ namespace VirtualPets
             if (PetHunger > 0)
             {
                 PetHunger--;
-                Console.WriteLine("You have fed your pet.");
+                Console.WriteLine("You have fed " + PetName);
 
             }
 
@@ -74,7 +74,7 @@ namespace VirtualPets
             if (PetBoredom > 0)
             {
                 PetBoredom --;
-                Console.WriteLine("You have played with your pet.");
+                Console.WriteLine("You have played with " + PetName);
             }
 
             else
@@ -89,7 +89,7 @@ namespace VirtualPets
             if (PetHealth < 10)
             {
                 PetHealth ++;
-                Console.WriteLine("You have improved your pet's health.");
+                Console.WriteLine("You have improved " + PetName + "'s health");
             }
 
             else
@@ -103,14 +103,10 @@ namespace VirtualPets
         }
         public void PetStatus()
         {
-            Console.WriteLine("Your pets status is:");
+            Console.WriteLine(PetName + " status:");
             Console.WriteLine("hunger " + PetHunger);
             Console.WriteLine("boredom " + PetBoredom);
             Console.WriteLine("health " + PetHealth);
-        }
-        public void PetNames()
-        {
-            Console.WriteLine(PetName);
         }
         
 
