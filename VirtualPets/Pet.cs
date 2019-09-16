@@ -108,6 +108,10 @@ namespace VirtualPets
             Console.WriteLine("boredom " + PetBoredom);
             Console.WriteLine("health " + PetHealth);
         }
+        public void PetNames()
+        {
+            Console.WriteLine(PetName);
+        }
         
 
     }

@@ -40,8 +40,8 @@ namespace VirtualPets
 
                         case "s":
                             Console.Clear();
-                            myPet.PetStatus();
-                            break;
+                        myShelter.ShowStatusOfPets();
+                        break;
 
                         case "f":
                             Console.Clear();

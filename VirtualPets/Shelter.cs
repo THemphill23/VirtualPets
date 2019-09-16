@@ -18,7 +18,15 @@ namespace VirtualPets
         {
             foreach (Pet pet in allPetsInShelter)
             pet.PetInfo();
-            Console.WriteLine("Pet Inbound");
+        }
+        public void ShowStatusOfPets()
+        {
+            foreach (Pet pet in allPetsInShelter)
+            {
+                pet.PetNames();
+                pet.PetStatus();
+                Console.WriteLine();
+            }
         }
 
 
