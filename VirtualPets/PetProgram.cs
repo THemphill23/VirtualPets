@@ -39,6 +39,10 @@ namespace VirtualPets
                             myShelter.ShowListOfPets();
                             break;
 
+                        case "t":
+
+                        gameMenu.SelectPetMenu(myShelter);
+                        break;
 
                         case "s":
                             Console.Clear();
