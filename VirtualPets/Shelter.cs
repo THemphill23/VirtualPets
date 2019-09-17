@@ -30,6 +30,14 @@ namespace VirtualPets
         }
         public void FeedAllPets()
         {
+            Console.WriteLine("Would you like to feed the one pet or all pets?");
+            gameMenu.SelectPetMenu(myShelter);
+            string userInput = Console.ReadLine();
+            bool singlePet = userInput.Equals(true);
+            if (singlePet)
+            {
+                Pet.Feed();
+            }
             foreach (Pet pet in allPetsInShelter)
             pet.Feed();
         }

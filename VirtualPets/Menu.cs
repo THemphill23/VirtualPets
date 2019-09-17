@@ -16,7 +16,7 @@ namespace VirtualPets
             Console.WriteLine("Type 'I' to view its information.");
             Console.WriteLine("Type 'S' to view its status.");
 
-            Console.WriteLine("Would you like to interact with one pet? Press 'T'");
+            Console.WriteLine("Type 'M' to see list of pets.");
 
             Console.WriteLine("Type 'F' to give your pet food.");
             Console.WriteLine("Type 'P' to play with your pet.");

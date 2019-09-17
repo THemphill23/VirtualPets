@@ -39,10 +39,9 @@ namespace VirtualPets
                             myShelter.ShowListOfPets();
                             break;
 
-                        case "t":
-
-                        gameMenu.SelectPetMenu(myShelter);
-                        break;
+                        case "m":
+                            gameMenu.SelectPetMenu(myShelter);
+                            break;
 
                         case "s":
                             Console.Clear();
@@ -51,6 +50,14 @@ namespace VirtualPets
 
                         case "f":
                             Console.Clear();
+                        Console.WriteLine("Would you like to feed the one pet or all pets?");
+                        gameMenu.SelectPetMenu(myShelter);
+                        string userInput = Console.ReadLine();
+                        bool singlePet = userInput.Equals(true);
+                        if (singlePet)
+                        {
+                            
+                        }
                             myShelter.FeedAllPets();
                             break;
 
