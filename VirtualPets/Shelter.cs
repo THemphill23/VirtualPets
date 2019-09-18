@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VirtualPets
 {
-    public class Shelter
+    public class Shelter 
     {
         public List<Pet> allPetsInShelter = new List<Pet>();
           
@@ -30,16 +30,17 @@ namespace VirtualPets
         }
         public void FeedAllPets()
         {
-            Console.WriteLine("Would you like to feed the one pet or all pets?");
-            gameMenu.SelectPetMenu(myShelter);
-            string userInput = Console.ReadLine();
-            bool singlePet = userInput.Equals(true);
-            if (singlePet)
-            {
-                Pet.Feed();
-            }
-            foreach (Pet pet in allPetsInShelter)
-            pet.Feed();
+
+            //Console.WriteLine("Would you like to feed the one pet or all pets?");
+            //gameMenu.SelectPetMenu(myShelter);
+            //string userInput = Console.ReadLine();
+            //bool singlePet = userInput.Equals(true);
+            //if (singlePet)
+            //{
+            //    myPet.Feed();
+            //}
+            //foreach (Pet pet in allPetsInShelter)
+            //    pet.Feed();
         }
         public void HealAllPets()
         {

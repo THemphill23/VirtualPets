@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VirtualPets
 {
-    class Menu
+    public class Menu
     {
         public void TheGameMenu()
         {
@@ -39,19 +39,9 @@ namespace VirtualPets
 
                 return Convert.ToInt32(selectedPetNumber) -1;
 
-        //}
             }
-            
-    //    Console.WriteLine("Please select a car:");
-    //        int carNumber = 1;
-    //        foreach(Car car in garage.Cars)
-    //        {
-    //        Console.WriteLine(carNumber + ", " + car.Make + ", " + car.Model);
-    //        carNumber++;
-    //        }
-
-    //string selectedCarNumber = Console.ReadLine();
-
-    //        return Convert.ToInt32(selectedCarNumber) -1;
     }
+            
+    
+    
 }

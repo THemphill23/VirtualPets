@@ -67,6 +67,22 @@ namespace VirtualPets
                 Console.WriteLine("Pet is full");
 
         }
+
+        public void SingleFeed()
+        {
+
+            if (PetHunger > 0)
+            {
+                PetHunger--;
+                Console.WriteLine("You have fed " + PetName);
+
+            }
+
+            else
+
+                Console.WriteLine("Pet is full");
+
+        }
         public void Play()
         {
 
