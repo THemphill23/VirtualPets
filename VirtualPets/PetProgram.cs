@@ -29,7 +29,7 @@ namespace VirtualPets
                         case "a":
                             Console.Clear();
                             myPet = new Pet();
-                            myPet.CreatePet();
+                            myPet.CreatePet(myPet);
                             myShelter.AddPetToShelter(myPet);
                        
                             break;

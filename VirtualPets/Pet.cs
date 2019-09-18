@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VirtualPets
 {
-    public class Pet
+    public class Pet : Shelter
     {
 
         public string PetName { get; set; }
@@ -28,7 +28,7 @@ namespace VirtualPets
 
         
 
-        public void CreatePet()
+        public void CreatePet(Pet myPet)
         {
             
             Console.WriteLine("\nWhat is your pet's name?");
@@ -41,10 +41,13 @@ namespace VirtualPets
                 PetType = petType;
 
                 if (petType == "organic")
-                    break;
+                    organicPets.Add(myPet);
+                //break;
                 else if (petType == "robotic")
-                    break;
+                    roboticPets.Add(myPet);
+                    //break;
                 else Console.WriteLine("not a valid entry");
+                break;
             }
             Console.WriteLine("What species is your pet?");
             string petSpecies = Console.ReadLine().ToLower();
