@@ -24,13 +24,13 @@ namespace VirtualPets
         {
             foreach (Pet pet in allPetsInShelter)
             {
-                if (pet.PetType == "organic")
-                    pet.PetStatus();
-                //break;
-                else if (pet.PetType == "robotic")
-                    pet.PetStatus();
-                else Console.WriteLine("not a valid entry");
-                    break;
+                pet.PetStatus();
+                //if (pet.PetType == "organic")
+                //    pet.PetStatus();
+                //else if (pet.PetType == "robotic")
+                //    pet.PetStatus();
+                //else Console.WriteLine("not a valid entry");
+                //    break;
                 
             }
         }
@@ -39,6 +39,18 @@ namespace VirtualPets
             Console.WriteLine("\nPlease select a pet from your shelter");
             Pet myPet = allPetsInShelter[Convert.ToInt32(Console.ReadLine())-1];
             myPet.Feed();
+        }
+        public void PlaySinglePet()
+        {
+            Console.WriteLine("\nPlease select a pet from your shelter");
+            Pet myPet = allPetsInShelter[Convert.ToInt32(Console.ReadLine()) - 1];
+            myPet.Play();
+        }
+        public void HealSinglePet()
+        {
+            Console.WriteLine("\nPlease select a pet from your shelter");
+            Pet myPet = allPetsInShelter[Convert.ToInt32(Console.ReadLine()) - 1];
+            myPet.Health();
         }
 
         public void FeedAllPets()

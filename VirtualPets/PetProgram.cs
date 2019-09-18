@@ -59,16 +59,26 @@ namespace VirtualPets
                             myShelter.FeedAllPets();
                             break;
 
-                        //Console.WriteLine("Would you like to feed the one pet or all pets?");
-                        //gameMenu.SelectPetMenu(myShelter);
-      
-
+                    //Console.WriteLine("Would you like to feed the one pet or all pets?");
+                    //gameMenu.SelectPetMenu(myShelter);
                     case "p":
+                        Console.Clear();
+                        gameMenu.PetMenu(myShelter);
+                        myShelter.PlaySinglePet();
+                        break;
+
+
+                    case "pa":
                             Console.Clear();
                             myShelter.PlayAllPets();
                             break;
+                    case "h":
+                        Console.Clear();
+                        gameMenu.PetMenu(myShelter);
+                        myShelter.HealSinglePet();
+                        break;
 
-                        case "h":
+                    case "ha":
                             Console.Clear();
                             myShelter.HealAllPets();
                             break;

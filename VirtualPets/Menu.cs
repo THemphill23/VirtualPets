@@ -21,7 +21,9 @@ namespace VirtualPets
             Console.WriteLine("Type 'F' to give a chosen pet food.");
             Console.WriteLine("Type 'FA' to feed all pets in the shelter.");
             Console.WriteLine("Type 'P' to play with your pet.");
+            Console.WriteLine("Type 'PA' to play with all pets in the shelter.");
             Console.WriteLine("Type 'H' to heal your pet.");
+            Console.WriteLine("Type 'HA' to heal all pets in the shelter.");
 
         }
 

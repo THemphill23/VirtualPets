@@ -8,7 +8,7 @@ namespace VirtualPets
     {
 
         public string PetName { get; set; }
-        public enum Type { organic, robotic }
+        //public enum Type { organic, robotic }
         public string PetType { get; set; }
         public string PetSpecies { get; set; }
 
