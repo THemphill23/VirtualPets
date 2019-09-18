@@ -18,28 +18,39 @@ namespace VirtualPets
 
             Console.WriteLine("Type 'M' to see list of pets.");
 
-            Console.WriteLine("Type 'F' to give your pet food.");
+            Console.WriteLine("Type 'F' to give a chosen pet food.");
+            Console.WriteLine("Type 'FA' to feed all pets in the shelter.");
             Console.WriteLine("Type 'P' to play with your pet.");
             Console.WriteLine("Type 'H' to heal your pet.");
 
         }
-        
-            
-            public int SelectPetMenu(Shelter shelter)
+
+
+        //public Pet SelectPetMenu(Shelter shelter)
+        //{
+
+        //    Console.WriteLine("\nWhich Pet would you like to interact with?");
+        //    int petNumber = 1;
+        //    foreach (Pet pet in shelter.allPetsInShelter)
+        //    {
+        //        Console.WriteLine($"{petNumber} {pet.PetName} {pet.PetSpecies} {pet.PetType}");
+        //        petNumber++;
+        //    }
+        //    int selectedPetNumber = Convert.ToInt32(Console.ReadLine());
+        //    return shelter.allPetsInShelter[selectedPetNumber -1];
+        //}
+
+        public Pet PetMenu(Shelter shelter)
+        {
+
+            int petNumber = 1;
+            foreach (Pet pet in shelter.allPetsInShelter)
             {
-
-                Console.WriteLine("\nWhich Pet would you like to interact with?");
-                int petNumber = 1;
-                foreach(Pet pet in shelter.allPetsInShelter)
-                    {
-                        Console.WriteLine($"{petNumber} {pet.PetName} {pet.PetSpecies} {pet.PetType}");
-                        petNumber++;
-                    }
-            string selectedPetNumber = Console.ReadLine();
-
-                return Convert.ToInt32(selectedPetNumber) -1;
-
+                Console.WriteLine($"{petNumber} {pet.PetName} {pet.PetSpecies} {pet.PetType}");
+                petNumber++;
             }
+            return null;
+        }
     }
             
     

@@ -6,6 +6,7 @@ namespace VirtualPets
 {
     public class Pet
     {
+
         public string PetName { get; set; }
         public enum Type { organic, robotic }
         public string PetType { get; set; }
@@ -24,6 +25,8 @@ namespace VirtualPets
             PetHealth = 5;
             
         }
+
+        
 
         public void CreatePet()
         {
@@ -68,21 +71,7 @@ namespace VirtualPets
 
         }
 
-        public void SingleFeed()
-        {
-
-            if (PetHunger > 0)
-            {
-                PetHunger--;
-                Console.WriteLine("You have fed " + PetName);
-
-            }
-
-            else
-
-                Console.WriteLine("Pet is full");
-
-        }
+        
         public void Play()
         {
 
@@ -117,7 +106,7 @@ namespace VirtualPets
         {
             Console.WriteLine("Your pet name is " + PetName + " and it is an " + PetType + " " + PetSpecies + ".");
         }
-        public void PetStatus()
+        public virtual void PetStatus()
         {
             Console.WriteLine(PetName + " status:");
             Console.WriteLine("hunger " + PetHunger);

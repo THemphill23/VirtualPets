@@ -40,7 +40,7 @@ namespace VirtualPets
                             break;
 
                         case "m":
-                            gameMenu.SelectPetMenu(myShelter);
+                            gameMenu.PetMenu(myShelter);
                             break;
 
                         case "s":
@@ -50,21 +50,18 @@ namespace VirtualPets
 
                         case "f":
                             Console.Clear();
+                            gameMenu.PetMenu(myShelter);
+                            myShelter.FeedSinglePet();
+                            break;
 
-                        Console.WriteLine("Would you like to feed the one pet or all pets?");
-                        gameMenu.SelectPetMenu(myShelter);
-                        string userInput = Console.ReadLine();
-                        bool singlePet = userInput.Equals(true);
-                        if (singlePet)
-                        {
-                            myPet.SingleFeed();
-                        }
-                        else
-                            {
-                            foreach (Pet pet in myShelter.allPetsInShelter)
-                                pet.Feed();
-                        }
-                        break;
+                    case "fa":
+                            Console.Clear();
+                            myShelter.FeedAllPets();
+                            break;
+
+                        //Console.WriteLine("Would you like to feed the one pet or all pets?");
+                        //gameMenu.SelectPetMenu(myShelter);
+      
 
                     case "p":
                             Console.Clear();
@@ -91,21 +88,7 @@ namespace VirtualPets
             
             }
 
-        public int SelectPetMenu(Shelter shelter)
-        {
-
-            Console.WriteLine("\nWhich Pet would you like to interact with?");
-            int petNumber = 1;
-            foreach (Pet pet in shelter.allPetsInShelter)
-            {
-                Console.WriteLine($"{petNumber} {pet.PetName} {pet.PetSpecies} {pet.PetType}");
-                petNumber++;
-            }
-            string selectedPetNumber = Console.ReadLine();
-
-            return Convert.ToInt32(selectedPetNumber) - 1;
-
-        }
+        
 
     }
         

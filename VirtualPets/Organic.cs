@@ -4,7 +4,16 @@ using System.Text;
 
 namespace VirtualPets
 {
-    class Organic
+    class Organic : Pet
     {
+       public Organic(string name, string species)
+        {
+            PetName = PetName;
+            PetSpecies = PetSpecies;
+            PetHunger = PetHunger;
+            PetBoredom = PetBoredom;
+            PetHealth = PetHealth;
+        }
+        
     }
 }
