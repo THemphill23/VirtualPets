@@ -4,11 +4,11 @@ using System.Text;
 
 namespace VirtualPets
 {
-    public class Pet : Shelter
+    public  class Pet 
     {
-        //Robotic robotic = new Robotic();
-        //Organic organic = new Organic();
-        
+        Robotic robotic = new Robotic();
+        Organic organic = new Organic();
+
 
 
         public string PetName { get; set; }
@@ -17,16 +17,14 @@ namespace VirtualPets
         public string PetSpecies { get; set; }
 
         public int PetHunger { get; set; }
-      
-        public int PetBoredom { get; set; }
         public int PetHealth { get; set; }
+        public int PetBoredom { get; set; }
 
         public Pet()
         {
-          
             PetHunger = 5;
-            PetBoredom = 5;
             PetHealth = 5;
+            PetBoredom = 5;
             
         }
 
@@ -43,25 +41,25 @@ namespace VirtualPets
                 Console.WriteLine("Is your pet organic or robotic?");
                 string petType = Console.ReadLine().ToLower();
                 PetType = petType;
-                switch (petType)
-                {
-                    case "organic":
-                    organicPets.Add(myPet);
-                        break;
+            //switch (petType)
+            //{
+            //    case "organic":
+            //        organicPets.Add(myPet);
+            //        break;
 
-                    case "robotic":
-                    roboticPets.Add(myPet);
-                        break;
+            //    case "robotic":
+            //        roboticPets.Add(myPet);
+            //        break;
 
-                    default:
-                        Console.WriteLine("not a valid entry");
-                        break;
-                }
-                //if (petType == "robotic")
-                //else if (petType == "organic")
-                //break;
-            
-            Console.WriteLine("What species is your pet?");
+            //    default:
+            //        Console.WriteLine("not a valid entry");
+            //        break;
+                    //}
+                    //if (petType == "robotic")
+                    //else if (petType == "organic")
+                    //break;
+
+                    Console.WriteLine("What species is your pet?");
             string petSpecies = Console.ReadLine().ToLower();
             PetSpecies = petSpecies;
 
@@ -121,13 +119,14 @@ namespace VirtualPets
         {
             Console.WriteLine("Your pet name is " + PetName + " and it is an " + PetType + " " + PetSpecies + ".");
         }
-        public virtual void PetStatus()
+        public  void PetStatus()
         {
-            Console.WriteLine(PetName + " status:");
-            Console.WriteLine("hunger " + PetHunger);
-            Console.WriteLine("boredom " + PetBoredom);
-            Console.WriteLine("health " + PetHealth);
-        }
+                Console.WriteLine(PetName + " status:");
+                Console.WriteLine("hunger " + PetHunger);
+                Console.WriteLine("boredom " + PetBoredom);
+                Console.WriteLine("health " + PetHealth);
+            }
+        
 
 
         //public void ShowOrganicPets()

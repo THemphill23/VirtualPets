@@ -37,11 +37,7 @@ namespace VirtualPets
                         case "i":
                             Console.Clear();
                             myShelter.ShowListOfPets();
-                        //Console.WriteLine();
-                    
-                        //myPet.ShowOrganicPets();
-                        //Console.WriteLine();
-                        //myPet.ShowRoboticPets();
+                   
 
                             break;
 
@@ -65,8 +61,6 @@ namespace VirtualPets
                             myShelter.FeedAllPets();
                             break;
 
-                    //Console.WriteLine("Would you like to feed the one pet or all pets?");
-                    //gameMenu.SelectPetMenu(myShelter);
                     case "p":
                         Console.Clear();
                         gameMenu.PetMenu(myShelter);
@@ -88,8 +82,6 @@ namespace VirtualPets
                             Console.Clear();
                             myShelter.HealAllPets();
                             break;
-
-                    
 
                         default:
                             Console.WriteLine("Please enter proper response!!!!");
