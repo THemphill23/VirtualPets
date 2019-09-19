@@ -9,7 +9,7 @@ namespace VirtualPets
         Pet myPet = new Pet();
         Shelter myShelter = new Shelter();
         Menu gameMenu = new Menu();
-
+        
         public void Start()
         {
 
@@ -29,7 +29,7 @@ namespace VirtualPets
                         case "a":
                             Console.Clear();
                             myPet = new Pet();
-                            myPet.CreatePet();
+                            myPet.CreatePet(myPet);
                             myShelter.AddPetToShelter(myPet);
                        
                             break;
@@ -37,8 +37,17 @@ namespace VirtualPets
                         case "i":
                             Console.Clear();
                             myShelter.ShowListOfPets();
+                        //Console.WriteLine();
+                    
+                        //myPet.ShowOrganicPets();
+                        //Console.WriteLine();
+                        //myPet.ShowRoboticPets();
+
                             break;
 
+                        case "m":
+                            gameMenu.PetMenu(myShelter);
+                            break;
 
                         case "s":
                             Console.Clear();
@@ -47,15 +56,35 @@ namespace VirtualPets
 
                         case "f":
                             Console.Clear();
+                            gameMenu.PetMenu(myShelter);
+                            myShelter.FeedSinglePet();
+                            break;
+
+                    case "fa":
+                            Console.Clear();
                             myShelter.FeedAllPets();
                             break;
 
-                        case "p":
+                    //Console.WriteLine("Would you like to feed the one pet or all pets?");
+                    //gameMenu.SelectPetMenu(myShelter);
+                    case "p":
+                        Console.Clear();
+                        gameMenu.PetMenu(myShelter);
+                        myShelter.PlaySinglePet();
+                        break;
+
+
+                    case "pa":
                             Console.Clear();
                             myShelter.PlayAllPets();
                             break;
+                    case "h":
+                        Console.Clear();
+                        gameMenu.PetMenu(myShelter);
+                        myShelter.HealSinglePet();
+                        break;
 
-                        case "h":
+                    case "ha":
                             Console.Clear();
                             myShelter.HealAllPets();
                             break;
@@ -74,10 +103,10 @@ namespace VirtualPets
                
             
             }
-            
-                   
-            
-        }
+
+        
+
+    }
         
 
         
