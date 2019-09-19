@@ -9,7 +9,7 @@ namespace VirtualPets
         Pet myPet = new Pet();
         Shelter myShelter = new Shelter();
         Menu gameMenu = new Menu();
-
+        
         public void Start()
         {
 
@@ -37,6 +37,12 @@ namespace VirtualPets
                         case "i":
                             Console.Clear();
                             myShelter.ShowListOfPets();
+                        //Console.WriteLine();
+                    
+                        //myPet.ShowOrganicPets();
+                        //Console.WriteLine();
+                        //myPet.ShowRoboticPets();
+
                             break;
 
                         case "m":

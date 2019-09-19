@@ -6,6 +6,7 @@ namespace VirtualPets
 {
     class Organic : Pet
     {
+
        public Organic(string name, string species)
         {
             PetName = PetName;

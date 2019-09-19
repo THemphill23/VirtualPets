@@ -6,6 +6,10 @@ namespace VirtualPets
 {
     public class Pet : Shelter
     {
+        //Robotic robotic = new Robotic();
+        //Organic organic = new Organic();
+        
+
 
         public string PetName { get; set; }
         //public enum Type { organic, robotic }
@@ -34,21 +38,29 @@ namespace VirtualPets
             Console.WriteLine("\nWhat is your pet's name?");
             PetName = Console.ReadLine();
             Console.Clear();
-            while (true)
-            {
+            //while (true)
+            
                 Console.WriteLine("Is your pet organic or robotic?");
                 string petType = Console.ReadLine().ToLower();
                 PetType = petType;
-
-                if (petType == "organic")
+                switch (petType)
+                {
+                    case "organic":
                     organicPets.Add(myPet);
-                //break;
-                else if (petType == "robotic")
+                        break;
+
+                    case "robotic":
                     roboticPets.Add(myPet);
-                    //break;
-                else Console.WriteLine("not a valid entry");
-                break;
-            }
+                        break;
+
+                    default:
+                        Console.WriteLine("not a valid entry");
+                        break;
+                }
+                //if (petType == "robotic")
+                //else if (petType == "organic")
+                //break;
+            
             Console.WriteLine("What species is your pet?");
             string petSpecies = Console.ReadLine().ToLower();
             PetSpecies = petSpecies;
@@ -116,8 +128,19 @@ namespace VirtualPets
             Console.WriteLine("boredom " + PetBoredom);
             Console.WriteLine("health " + PetHealth);
         }
-        
 
+
+        //public void ShowOrganicPets()
+        //{
+        //    foreach (Pet pet in organicPets)
+        //        pet.PetInfo();
+        //}
+
+        //public void ShowRoboticPets()
+        //{
+        //    foreach (Pet pet in roboticPets)
+        //        pet.PetInfo();
+        //}
     }
     
 
