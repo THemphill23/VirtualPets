@@ -28,20 +28,27 @@ namespace VirtualPets
 
                         case "a":
                             Console.Clear();
-                            myPet = new Pet();
+                        Console.WriteLine("If you want to make an organic pet: press 'o'");
+                        Console.WriteLine("If you want to make an robotic pet: press 'r'");
+                        string OrganicOrRobotic = Console.ReadLine();
+                        if (OrganicOrRobotic == "o")
+                        {
+                            myPet = new Organic();
                             myPet.CreatePet(myPet);
                             myShelter.AddPetToShelter(myPet);
-                       
-                            break;
+                        }
+                        else if (OrganicOrRobotic == "r")
+                        {
+                            myPet = new Robotic();
+                            myPet.CreatePet(myPet);
+                            myShelter.AddPetToShelter(myPet);
+                        }
+
+                        break;
 
                         case "i":
                             Console.Clear();
                             myShelter.ShowListOfPets();
-                        //Console.WriteLine();
-                    
-                        //myPet.ShowOrganicPets();
-                        //Console.WriteLine();
-                        //myPet.ShowRoboticPets();
 
                             break;
 
@@ -65,8 +72,6 @@ namespace VirtualPets
                             myShelter.FeedAllPets();
                             break;
 
-                    //Console.WriteLine("Would you like to feed the one pet or all pets?");
-                    //gameMenu.SelectPetMenu(myShelter);
                     case "p":
                         Console.Clear();
                         gameMenu.PetMenu(myShelter);
@@ -89,6 +94,13 @@ namespace VirtualPets
                             myShelter.HealAllPets();
                             break;
 
+                    case "r":
+                            Console.Clear();
+                            int petIndex = SelectPetMenu(myShelter);
+                            myShelter.RemovePet(petIndex);
+
+                        break;
+
                     
 
                         default:
@@ -104,7 +116,20 @@ namespace VirtualPets
             
             }
 
-        
+        public static int SelectPetMenu(Shelter shelter)
+        {
+            Console.WriteLine("Please select a pet:");
+            int petNumber = 1;
+            foreach (Pet pet in shelter.allPetsInShelter)
+            {
+                Console.WriteLine($"{petNumber}. {pet.PetName}, {pet.PetSpecies}");
+                petNumber++;
+            }
+
+            int selectedPetNumber = Convert.ToInt32(Console.ReadLine());
+
+            return (selectedPetNumber - 1);
+        }
 
     }
         
