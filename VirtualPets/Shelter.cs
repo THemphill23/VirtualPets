@@ -7,8 +7,6 @@ namespace VirtualPets
     public class Shelter
     {
         public List<Pet> allPetsInShelter = new List<Pet>();
-        public List<Pet> roboticPets = new List<Pet>();
-        public List<Pet> organicPets = new List<Pet>();
 
         public void AddPetToShelter(Pet myPet)
         {
@@ -28,13 +26,6 @@ namespace VirtualPets
             {
                 pet.PetStatus();
                 Console.WriteLine();
-                //if (pet.PetType == "organic")
-                //    pet.PetStatus();
-
-                //else if (pet.PetType == "robotic")
-                //    pet.PetStatus();
-                //else Console.WriteLine("not a valid entry");
-                //break;
 
             }
         }
@@ -72,6 +63,11 @@ namespace VirtualPets
         {
             foreach (Pet pet in allPetsInShelter)
             pet.Play();
+        }
+        public void RemovePet(int index)
+        {
+           
+            allPetsInShelter.RemoveAt(index);
         }
     }
 }
