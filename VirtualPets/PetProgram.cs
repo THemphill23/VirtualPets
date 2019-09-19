@@ -107,8 +107,8 @@ namespace VirtualPets
                             Console.WriteLine("Please enter proper response!!!!");
                             break;
                     }
-               
 
+                myShelter.Ticking();
                 
 
                 }

@@ -69,5 +69,9 @@ namespace VirtualPets
            
             allPetsInShelter.RemoveAt(index);
         }
+        public void Ticking()
+        {
+            foreach (Pet pet in allPetsInShelter) pet.Ticking();
+        }
     }
 }

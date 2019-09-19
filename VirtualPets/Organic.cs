@@ -98,7 +98,12 @@ namespace VirtualPets
             Console.WriteLine("health " + PetHealth);
         }
 
-
+        public override void Ticking()
+        {
+            PetBoredom++;
+            PetHunger++;
+            PetHealth--;
+        }
 
 
     }

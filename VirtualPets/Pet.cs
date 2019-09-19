@@ -38,7 +38,10 @@ namespace VirtualPets
         public virtual void PetStatus()
         {
         }
+        public virtual void Ticking()
+        {
 
+        }
 
     }
     
