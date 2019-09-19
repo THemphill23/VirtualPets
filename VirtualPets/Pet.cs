@@ -11,7 +11,10 @@ namespace VirtualPets
         public string PetSpecies { get; set; }
 
 
-        
+        public virtual void Ticking()
+        {
+
+        }
 
         public virtual void CreatePet(Pet myPet)
         {

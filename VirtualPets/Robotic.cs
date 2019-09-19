@@ -16,7 +16,6 @@ namespace VirtualPets
             PetOil = 5;
             PetBoredom = 5;
             PetBattery = 5;
-
         }
 
 
@@ -97,7 +96,12 @@ namespace VirtualPets
             Console.WriteLine("battery " + PetBattery);
         }
 
-
+        public override void Ticking()
+        {
+            PetBoredom++;
+            PetOil++;
+            PetBattery--;
+        }
 
 
     }

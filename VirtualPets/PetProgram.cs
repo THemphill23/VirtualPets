@@ -28,9 +28,9 @@ namespace VirtualPets
 
                         case "a":
                             Console.Clear();
-                        Console.WriteLine("If you want to make an organic pet: press 'o'");
-                        Console.WriteLine("If you want to make an robotic pet: press 'r'");
-                        string OrganicOrRobotic = Console.ReadLine();
+                            Console.WriteLine("If you want to make an organic pet: press 'o'");
+                            Console.WriteLine("If you want to make an robotic pet: press 'r'");
+                            string OrganicOrRobotic = Console.ReadLine();
                         if (OrganicOrRobotic == "o")
                         {
                             myPet = new Organic();
@@ -98,6 +98,7 @@ namespace VirtualPets
                             Console.Clear();
                             int petIndex = SelectPetMenu(myShelter);
                             myShelter.RemovePet(petIndex);
+                            Console.WriteLine("You have removed your pet");
 
                         break;
 
@@ -106,7 +107,10 @@ namespace VirtualPets
                         default:
                             Console.WriteLine("Please enter proper response!!!!");
                             break;
+
+
                     }
+                        myShelter.Ticking();
                
 
                 
