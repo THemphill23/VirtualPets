@@ -1,0 +1,12 @@
+# VirtualPets
+To begin the game you must add a pet.
+To add a pet press 'a'.
+Once a pet is Added you must add information about the pet.
+You must input whether the pet is 'organic' or 'Robotic' and indicate species.
+Once you have added a pet:
+Press 'i' for pets information
+Press 's' for pets status
+Press 'f' to feed pet
+Press 'p' to play with pet
+Press 'h' to heal pet
+Once you are done playing, press 'l' to leave
